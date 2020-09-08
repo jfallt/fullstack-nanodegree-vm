@@ -9,17 +9,15 @@
 	</head>
     <body>
         <h1>
-            New Menu Item
+            Are you sure you want to delete {{restaurant.name}}?
         </h1>
 
-        <form
-            action="{{ url_for('newMenuItem', restaurant_id=restaurant_id)}}"
-            method = 'post'>
-        <p>Name:</p>
-            <input type="text" size="30" name="name">
+    <form action="{{ url_for('deleteRestaurant', restaurant_id=restaurant.restaurant_id)}}" method = 'post'>
 
-            <input type="submit" value="Create">
-        </form>
-        
+    <input type='submit', value = 'Delete'>
+
+    </form>
+
+    <a href = "{{ url_for('showRestaurants')}}"> Cancel </a>
     </body>
 </html>

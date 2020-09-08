@@ -1,6 +1,6 @@
 <html>
     <head>
-		<title>Delete Restaurant</title>
+		<title>New Restaurant</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
@@ -9,11 +9,11 @@
 	</head>
     <body>
         <h1>
-            New Menu Item
+            New Restaurant
         </h1>
 
         <form
-            action="{{ url_for('newMenuItem', restaurant_id=restaurant_id)}}"
+            action="{{ url_for('newRestaurant')}}"
             method = 'post'>
         <p>Name:</p>
             <input type="text" size="30" name="name">
